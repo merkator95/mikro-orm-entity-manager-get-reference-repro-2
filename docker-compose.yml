@@ -1,0 +1,12 @@
+# Docker compose for local development only
+services:
+  postgres:
+    container_name: repro-postgres-localdb
+    image: postgres:15
+    ports:
+      - '5432:5432'
+    restart: always
+    env_file:
+      - compose-local-postgres.env
+
+ 
