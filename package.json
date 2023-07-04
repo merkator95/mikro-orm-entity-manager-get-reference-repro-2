@@ -1,0 +1,39 @@
+{
+  "name": "@mikro-orm/example-esm-test",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "5.7.12",
+    "@mikro-orm/core": "5.7.12",
+    "@mikro-orm/knex": "5.7.12",
+    "@mikro-orm/migrations": "5.7.12",
+    "@mikro-orm/postgresql": "5.7.12",
+    "@mikro-orm/reflection": "5.7.12",
+    "@mikro-orm/sqlite": "5.7.12"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "5.7.12",
+    "@vitest/ui": "latest",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vite": "latest",
+    "vitest": "latest"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  },
+  "stackblitz": {
+    "startCommand": "npm run test:ui"
+  }
+}
