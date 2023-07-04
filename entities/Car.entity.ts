@@ -4,9 +4,7 @@ import { CustomBaseEntity } from "./Base.entity.js";
 
 @Entity()
 export class CarEntity extends CustomBaseEntity{
-  // @PrimaryKey()
-  // @Index()
-  // id: string = crypto.randomUUID();
+
   
   @Property()
   brand: string;

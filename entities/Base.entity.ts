@@ -13,5 +13,5 @@ export abstract class CustomBaseEntity {
   updatedAt: Date = new Date();
 
   @Property({ version: true })
-  version!: number;
+  version!: number; // Commenting this out fixes the issue 
 }

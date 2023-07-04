@@ -4,10 +4,7 @@ import { CustomBaseEntity } from './Base.entity.js';
 
 @Entity()
 export class DriverEntity extends CustomBaseEntity{
-  // @PrimaryKey()
-  // @Index()
-  // id: string = crypto.randomUUID();
-  
+
   @OneToOne(() => CarEntity, (car) => car.driver, {
     orphanRemoval: true,
   })

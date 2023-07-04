@@ -1,14 +1,12 @@
 import { test, beforeAll, afterAll, beforeEach, expect } from 'vitest';
 import { MikroORM } from '@mikro-orm/core';
 import { CarEntity } from './entities/Car.entity.js';
-import config from './mikro-orm.config.js';
-import { DriverEntity } from './entities/Driver.entity.js';
 import mikroOrmConfig from './mikro-orm.config.js';
+import { DriverEntity } from './entities/Driver.entity.js';
 
 let orm: MikroORM;
 
 beforeAll(async () => {
-  // orm = await MikroORM.init(config);
   orm = await MikroORM.init(mikroOrmConfig);
   await orm.schema.refreshDatabase();
 });
